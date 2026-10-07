@@ -13,7 +13,6 @@ class DadoViewModel: ViewModel() {
 
     var resultado by mutableStateOf("")
 
-    @RequiresApi(Build.VERSION_CODES.VANILLA_ICE_CREAM)
     fun tirar_dado(){
         resultado = Random.nextInt(1,7).toString()
     }

@@ -33,9 +33,35 @@ fun CalculadoraScreen (
             horizontalArrangement = Arrangement.SpaceEvenly,
             modifier = Modifier.fillMaxWidth()
         ){
-            Button({ viewModel.clickOn5() }){Text("5")}
-            Button({ viewModel.clickOn7() }){Text("7")}
             Button({ viewModel.sumar() }){Text("+")}
+            Button({ viewModel.restar() }){Text("-")}
+            Button({ viewModel.multiplicacion() }){Text("*")}
+            Button({ viewModel.division() }){Text("/")}
+        }
+
+        Row(
+            horizontalArrangement = Arrangement.SpaceEvenly,
+            modifier = Modifier.fillMaxWidth()
+        ){
+            Button({ viewModel.clickOn1() }){Text("1")}
+            Button({ viewModel.clickOn2() }){Text("2")}
+            Button({ viewModel.clickOn3() }){Text("3")}
+        }
+        Row(
+            horizontalArrangement = Arrangement.SpaceEvenly,
+            modifier = Modifier.fillMaxWidth()
+        ){
+            Button({ viewModel.clickOn4() }){Text("4")}
+            Button({ viewModel.clickOn5() }){Text("5")}
+            Button({ viewModel.clickOn6() }){Text("6")}
+        }
+        Row(
+            horizontalArrangement = Arrangement.SpaceEvenly,
+            modifier = Modifier.fillMaxWidth()
+        ){
+            Button({ viewModel.clickOn7() }){Text("7")}
+            Button({ viewModel.clickOn8() }){Text("8")}
+            Button({ viewModel.clickOn9() }){Text("9")}
         }
         Button({viewModel.resultado()}){Text("=")}
     }
@@ -45,6 +71,6 @@ fun CalculadoraScreen (
 @Composable
 fun CalculadoraScreenPreview(){
     CalculadoraTheme() {
-        CalculadoraScreen()
+        CalculadoraScreen(viewModel())
     }
 }
