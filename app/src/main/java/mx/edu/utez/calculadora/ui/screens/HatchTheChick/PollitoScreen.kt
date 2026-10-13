@@ -38,7 +38,7 @@ fun PollitoSreen (){
 }
 
 
-@Preview(showBackground = true)
+@Preview(showBackground = true)//hace que podaamos hacerlo
 @Composable
 fun PollitoSreenPreview (){
     CalculadoraTheme() {
